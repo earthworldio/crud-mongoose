@@ -30,5 +30,19 @@ app.post('/list/delete', async (req, res) => {
     } catch (error) { res.send({ message: error.message }) }
 })
 
+app.post('/list/edit', async (req, res) => {
+    try {
+        const { list, important, description, id } = req.body
+        const user = await ListModel.findById(id)
+
+        Object.assign(user, { list, important, description })
+
+        await user.save()
+
+        res.send({ message: 'success' })
+
+
+    } catch (error) { res.send({ message: error.message }) }
+})
 
 module.exports = app

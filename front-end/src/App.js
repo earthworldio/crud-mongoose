@@ -67,19 +67,15 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <div className="card container col-3  text-center">
+      <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className="card text-center  container col-3  ">
           <div className="card-body">
-            <h4>Register</h4>
+            <h4>REGISTER</h4>
             <input type="text" className="form-control mt-4" onChange={e => setUsername(e.target.value)} />
             <input type="text" className="form-control mt-4" onChange={e => setPassword(e.target.value)} />
-            <button type="button" class="btn btn-primary mt-4" style={{ width: '120px' }} onClick={handleLogin}>
-              LOGIN
-            </button>
+            <button type="button" class="btn btn-primary mt-4" style={{ width: '120px' }} onClick={handleLogin}>LOGIN</button>
             <br />
-            <button type="button" class="btn btn-success mt-4" data-bs-toggle="modal" data-bs-target="#registerModal" style={{ width: '120px' }}>
-              REGISTER
-            </button>
+            <button type="button" class="btn btn-success mt-4" data-bs-toggle="modal" data-bs-target="#registerModal" style={{ width: '120px' }}>REGISTER</button>
           </div>
         </div>
 

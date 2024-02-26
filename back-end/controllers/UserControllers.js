@@ -34,4 +34,12 @@ app.post('/user/login', async (req, res) => {
 
 })
 
+app.post('/user/getName', async (req, res) => {
+    try {
+
+    } catch (error) {
+        res.send({ mesasge: error.message })
+    }
+})
+
 module.exports = app
