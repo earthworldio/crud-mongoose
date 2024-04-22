@@ -1,7 +1,7 @@
 const express = require('express')
 const db = require('./connect-db')
 const app = express()
-const port = 3000
+const port = 5005
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
